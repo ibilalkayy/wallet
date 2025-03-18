@@ -6,7 +6,7 @@ use tera::Tera;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    let tera = Tera::new("src/views/templates/*").unwrap();
+    let tera = Tera::new("src/views/*").unwrap();
 
     println!("Starting the server at port :8080");
     HttpServer::new(move || {

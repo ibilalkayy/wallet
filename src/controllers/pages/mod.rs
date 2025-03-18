@@ -1,10 +1,9 @@
 pub mod account;
 pub mod dapp;
-pub mod history;
 pub mod index;
-pub mod manage;
-pub mod multi_chain;
 pub mod rpc;
+pub mod nfts;
 pub mod security;
-pub mod token;
-pub mod transfer;
+pub mod settings;
+pub mod tokens;
+pub mod wallets;

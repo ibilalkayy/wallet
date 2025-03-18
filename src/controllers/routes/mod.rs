@@ -1,6 +1,6 @@
 use crate::controllers::pages::{
-    account::account, dapp::dapp, history::history, index::index, manage::manage,
-    multi_chain::multi_chain, rpc::rpc, security::security, token::token, transfer::transfer,
+    account::account, dapp::dapp, index::index, rpc::rpc, security::security,
+    nfts::nfts, tokens::tokens, settings::settings, wallets::wallets,
 };
 use actix_web::web;
 
@@ -10,12 +10,11 @@ pub fn configure(cfg: &mut web::ServiceConfig) {
             .route("/", web::get().to(index))
             .route("/account", web::get().to(account))
             .route("/dapp", web::get().to(dapp))
-            .route("/history", web::get().to(history))
-            .route("/manage", web::get().to(manage))
-            .route("/multi_chain", web::get().to(multi_chain))
             .route("/rpc", web::get().to(rpc))
+            .route("/nfts", web::get().to(nfts))
+            .route("/settings", web::get().to(settings))
             .route("/security", web::get().to(security))
-            .route("/token", web::get().to(token))
-            .route("/transfer", web::get().to(transfer)),
+            .route("/tokens", web::get().to(tokens))
+            .route("/wallets", web::get().to(wallets))
     );
 }

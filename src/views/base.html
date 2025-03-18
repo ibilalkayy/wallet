@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>{% block title %} {% endblock title %}</title>
+</head>
+<body>
+    <div class="grid grid-cols-1 gap-2 mt-16 md:grid-cols-3">
+        <!-- First column -->
+        <div>
+            <h1 class="text-6xl font-bold font-serif mt-6 ml-22"> Wallet </h1>
+        
+            <div>
+                <div class="flex flex-col">
+                    <div class="mt-12 ml-30 text-2xl"><a href="/" class="hover:bg-gray-200">Home</a></div>
+                    <div class="mt-8 ml-30 text-2xl"><a href="/wallets" class="hover:bg-gray-200">Wallets</a></div>
+                    <div class="mt-8 ml-30 text-2xl"><a href="/tokens" class="hover:bg-gray-200">Tokens</a></div>
+                    <div class="mt-8 ml-30 text-2xl"><a href="/nfts" class="hover:bg-gray-200">NFTs</a></div>
+                    <div class="mt-8 ml-30 text-2xl"><a href="/dapp" class="hover:bg-gray-200">DApps</a></div>
+                    <div class="mt-8 ml-30 text-2xl"><a href="/rpc" class="hover:bg-gray-200">RPC</a></div>
+                    <div class="mt-8 ml-30 text-2xl"><a href="/settings" class="hover:bg-gray-200">Settings</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second column -->
+        <div class="mt-12 md:ml-0 ml-18">
+            <div class="flex items-center space-x-2">
+                <label for="Network" class="text-2xl font-bold font-serif">Network: </label>
+                <select name="Network" id="network" class="border-2 border-gray-400 rounded-md w-28 h-8 indent-2">
+                    <option value="Bitcoin">Bitcoin</option>
+                    <option value="Ethereum">Ethereum</option>
+                    <option value="Solana">Solana</option>
+                </select>
+            </div>
+
+            <div class="flex flex-row mt-6">
+                <h2 class="text-2xl font-bold font-serif">Total Balance: </h2>
+                <p class="font-serif text-2xl mb-1 indent-3">$1000 - (0.45 Eth)</p>
+            </div>
+
+        {% block second_column %} {% endblock second_column %}
+</body>
+</html>

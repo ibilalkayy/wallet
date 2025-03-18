@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %} Wallets {% endblock title %}
+
+{% block second_column %}
+    
+        <div class="mt-4">
+            <h2 class="text-2xl font-bold font-serif">Actions</h2>
+            <div class="flex flex-row mt-3">
+                <div class="flex flex-col">
+                    <div><a href="#" class="text-lg">Create wallet</a></div>
+                    <div class="mt-2"><a href="#" class="text-lg">View wallet</a></div>
+                </div>
+
+                <div class="flex flex-col ml-6">
+                    <div><a href="#" class="text-lg">Import wallet</a></div>
+                    <div class="mt-2"><a href="#" class="text-lg">Export wallet</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h2 class="text-2xl font-bold font-serif">Wallets Info</h2>
+            <ul class="mt-3 list-disc pl-5">
+                <li class="text-lg">Main Wallet (0x123...abc) - [Unlocked]</li>
+                <li class="text-lg">Cold Wallet (0x123...abc) - [Locked]</li>
+                <li class="text-lg">Eth Wallet (0x123...abc) - [Locked]</li>
+            </ul>    
+        </div>
+
+        <div class="mt-10 ml-20">
+            <button class="rounded-full bg-black text-lg font-serif text-white pl-4 pr-4 pt-1 pb-2">Show more</button>
+        </div>
+    </div>
+</div>
+
+{% endblock second_column %}
