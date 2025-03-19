@@ -1,7 +1,12 @@
 use actix_web::{HttpResponse, Responder, web};
 use tera::{Context, Tera};
 
+use crate::controllers::middleware::middleware::check_login;
+
 pub async fn security(tmpl: web::Data<Tera>) -> impl Responder {
+    if let Some(resource) = check_login() {
+        return resource;
+    }
     let ctx = Context::new();
     let s = tmpl.render("security.html", &ctx).unwrap();
     HttpResponse::Ok().body(s)

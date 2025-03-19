@@ -1,4 +1,4 @@
-pub mod account;
+pub mod welcome;
 pub mod dapp;
 pub mod index;
 pub mod rpc;

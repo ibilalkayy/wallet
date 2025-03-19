@@ -1,5 +1,5 @@
 use crate::controllers::pages::{
-    account::account, dapp::dapp, index::index, rpc::rpc, security::security,
+    welcome::welcome, dapp::dapp, index::index, rpc::rpc, security::security,
     nfts::nfts, tokens::tokens, settings::settings, wallets::wallets,
 };
 use actix_web::web;
@@ -8,7 +8,7 @@ pub fn configure(cfg: &mut web::ServiceConfig) {
     cfg.service(
         web::scope("")
             .route("/", web::get().to(index))
-            .route("/account", web::get().to(account))
+            .route("/welcome", web::get().to(welcome))
             .route("/dapp", web::get().to(dapp))
             .route("/rpc", web::get().to(rpc))
             .route("/nfts", web::get().to(nfts))
