@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="message">
+        {% if continued %}
+        <div class="text-center mt-6">
+            <h1 class="font-serif text-black font-bold text-4xl">🎉 Congratulations 🎉</h1>
+        </div>
+    
+        <div class="text-center mt-2">
+            <p class="font-serif text-black">
+                You have successfully protected your wallet.
+                Remember to keep your Secret Recovery Phrase safe,
+                it's your responsibility.
+            </p>
+        </div>
+
+        <div class="text-center mt-10">
+            <a href="/">
+                <button class="rounded-full bg-black text-lg font-serif text-white pl-6 pr-6 pt-2 pb-2 hover:bg-gray-700"> Done </button>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
