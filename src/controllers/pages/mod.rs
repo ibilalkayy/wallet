@@ -7,3 +7,4 @@ pub mod security;
 pub mod settings;
 pub mod tokens;
 pub mod wallets;
+pub mod wallet;

@@ -1,6 +1,5 @@
 use actix_web::{HttpResponse, Responder, web};
 use tera::{Context, Tera};
-
 use crate::controllers::middleware::middleware::check_login;
 
 pub async fn dapp(tmpl: web::Data<Tera>) -> impl Responder {
