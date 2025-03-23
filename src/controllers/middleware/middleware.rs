@@ -1,7 +1,7 @@
 use actix_web::HttpResponse;
 
 pub fn check_login() -> Option<HttpResponse> {
-    let is_logged_in = false;
+    let is_logged_in = true;
     if !is_logged_in {
         Some(HttpResponse::Found().append_header(("Location", "/welcome")).finish())
     } else {
