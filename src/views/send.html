@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Send Amount</title>
+</head>
+<body>
+    <div class="flex justify-center">
+        <h2 class="text-3xl font-serif text-black pt-20 md:text-4xl font-bold">Send Amount</h2>
+    </div>
+
+    <div class="flex justify-center">
+        <p class="text-lg font-serif text-black pb-10 pt-5 sm:text-lg text-center">Enter the recepient wallet public address to send money to</p>
+    </div>
+
+    <form action="#" method="POST">
+        <div class="text-center">
+            <label for="address" class="mr-5">Wallet: </label>
+            <input type="address" id="address" class="mt-2 mb-4 border-2 border-gray-500 rounded-lg w-76 md:ml-1">
+        </div>
+
+        <div class="text-center mt-8">
+            <button class="rounded-full bg-black text-lg font-serif text-white pl-6 pr-6 pt-2 pb-2 hover:bg-gray-700">Continue</button>
+        </div>
+    </form>
+</body>
+</html>

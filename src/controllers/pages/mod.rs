@@ -9,3 +9,4 @@ pub mod tokens;
 pub mod wallets;
 pub mod wallet;
 pub mod phrase;
+pub mod send;

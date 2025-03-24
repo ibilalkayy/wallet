@@ -1,6 +1,6 @@
 use crate::controllers::pages::{
     welcome::welcome, dapp::dapp, index::index, rpc::rpc, security::security, phrase::{phrase, phrase_continue},
-    nfts::nfts, tokens::tokens, settings::settings, wallets::wallets, wallet::wallet,
+    nfts::nfts, tokens::tokens, settings::settings, wallets::wallets, wallet::wallet, send::send,
 };
 use actix_web::web;
 
@@ -19,5 +19,6 @@ pub fn configure(cfg: &mut web::ServiceConfig) {
             .route("/security", web::get().to(security))
             .route("/tokens", web::get().to(tokens))
             .route("/wallets", web::get().to(wallets))
+            .route("/send", web::get().to(send))
     );
 }
